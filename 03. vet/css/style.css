@@ -1,0 +1,175 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'TTLaundryGothicB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicR.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'TTLaundryGothicB';
+}
+body {
+    width: 100%; height: 100%; background: #ffffff;
+    color: #666666; font-size: 20px;
+}
+ul {list-style: none;}
+a {text-decoration: none; color: inherit; display: block;}
+img {max-width: 100%; vertical-align: top;}
+table {max-width: 100%; border-collapse: collapse;}
+button {cursor: pointer;}
+a:hover, a:focus {font-weight: bold;}
+
+
+/*레이아웃------------------------*/
+header {
+    width: 1340px; height: 100px; margin: 0 auto;
+    display: flex; justify-content: space-between;
+}
+#slide {width: 100%; height: 350px; background: lightblue;}
+#cont {
+    width: 1340px; margin: 0 auto; position: relative; display: grid;
+    grid-template-rows: 200px auto;
+    grid-template-columns: 640px 700px;
+}
+footer {
+    width: 1340px; height: 80px; margin: 0 auto;
+    background: #283a97;
+}
+
+/*헤더------------------------*/
+.logo {
+    width: 200px; height: 100%; display: flex;
+    align-items: center; justify-content: center;
+}
+nav {width: 800px; height: 100%; position: relative; text-align: center;}
+.navi {position: absolute; top: 57px; right: 30px; display: flex;}
+.navi>li {width: 150px; position: relative; margin-right: 10px;}
+.navi>li>a {width: 100%; height: 100%; padding: 10px;}
+.navi>li:hover, .navi>li>a:focus {
+    background: #a1ce57; color: #406c11;
+    border-radius: 15px 15px 0 0;
+}
+.sub {position: absolute; color: #666; z-index: 33; display: none;}
+.sub li {width: 150px; font-size: 16px;}
+.sub li a {width: 100%; height: 100%;  padding: 10px;}
+.sub>li:hover, .sub>li>a:focus {
+    color: #283a97;
+}
+.sub>li:last-child:hover, .sub>li:last-child>a:focus {
+    border-radius: 0 0 15px 15px;
+}
+.bg {
+    width: 100%; height: 164px;
+    background: rgba(255, 255, 255, .7);
+    position: absolute; top: 100px; left: 0;
+    z-index: 22; display: none;
+}
+
+/*슬라이드------------------------*/
+#slide ul {width: 100%; height: 100%; position: relative}
+#slide li {width: 100%; height: 100%; position: absolute;}
+.s1 {background: url(../image/s1.jpg) no-repeat center/cover;}
+.s2 {background: url(../image/s2.jpg) no-repeat center/cover;}
+.s3 {background: url(../image/s3.jpg) no-repeat center/cover;}
+#slide li h2 {
+    width: 100%; height: 50px; line-height: 50px;
+    text-align: center; color: #fff;
+    position: absolute; bottom: 25px;
+    text-shadow: 2px 2px 3px #000;
+}
+
+/*컨텐츠------------------------*/
+.cont1 {width: 100%; height: 100%;}
+.cont1 ul {
+    width: 100%; height: 100%; color: #fff; display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px; gap: 10px;
+}
+.cont1 li {width: 100%; height: 100%;}
+.cont1 a {
+    width: 100%; height: 100%; display: flex;
+    align-items: center; justify-content: center;
+    padding: 10px; border-radius: 30px;
+}
+.cont1 img {width: 50px; height: 50px; margin-right: 10px;}
+.cont1 li:nth-child(odd) a {background: #a1ce57;}
+.cont1 li:nth-child(even) a {background: #81ab3d;}
+.cont1 li a:hover, .cont1 li a:focus {
+    background: #406c11;
+}
+
+.cont2 {width: 700px; height: 200px; padding: 10px;}
+.cont2 a {width: 100%; height: 100%;}
+.cont2 img {height: 180px; object-fit: contain;}
+.cont2 a:hover {filter: grayscale(.5);}
+
+.cont3 {width: 100%; height: 270px; padding: 0 10px;}
+.tab {margin-left: 20px; display: flex;}
+.tab li {
+    width: 100px; height: 40px; background: #fff;
+    color: #406c11; border-radius: 15px 15px 0 0;
+    margin-left: -2px; border: 2px solid #a1ce57;
+    text-align: center; line-height: 40px;
+    border-bottom: none;
+}
+.tab .on {background: #a1ce57;}
+.cont3>div {
+    width: 100%; height: 220px; background: #fff;
+    border-radius: 20px; padding: 10px;
+    border: 2px solid #a1ce57; overflow: hidden;
+}
+.noti {width: 100%; height: 100%; margin-bottom: 20px; font-size: 18px;}
+.noti tr {border-bottom: 1px dashed #81ab3d;}
+.noti tr:last-child {border: none;}
+.noti th {text-align: left; padding: 0 20px; font-weight: normal;}
+.noti tr th a {width: 100%; height: 100%; display: flex; align-items: center;}
+.noti td {text-align: right; padding: 0 20px;}
+.noti tr:hover, .noti tr th a:focus {
+    background: #81ab3d; color: #fff;
+    font-weight: bold;
+}
+.gall {width: 100%; height: 100%; display: flex; align-items: center; justify-content: space-around; text-align: center;}
+.gall li {padding: 10px;}
+.gall img {height: 150px; margin-bottom: 10px;}
+.gall img:hover {opacity: .5;}
+.cont4 {
+    width:100%; height: 100%; display: flex; padding: 10px; align-items: center; justify-content: space-around;}
+.cont4 img {height: 200px;}
+.ytxt {text-align: center;}
+.ytxt h3 {margin-bottom: 20px;}
+.cont4p {position: relative;}
+.hover {position: absolute; left: 0; top: 0; opacity: 0;}
+.hover:hover{opacity: 1;}
+/*팝업------------------------*/
+.modal {width: 100%; height: 100%; position: fixed; left: 0; top: 0; background: rgba(0, 0, 0, .5); z-index: 99; display: none;}
+.body {width: 300px; margin: 200px auto;}
+.bt {float: right;}
+button {
+    width: 60px; height: 35px; line-height: 35px;
+    text-align: center; background: #283a97;
+    color: #fff; border: none;
+    border-radius: 0 0 10px 10px;
+}
+
+/*푸터------------------------*/
+.foot1 {
+    width: 200px; height: 100%;
+    float: left; display: flex; align-items: center;
+    justify-content: center; padding: 0 30px;
+}
+.foot1 img {filter: grayscale(1) brightness(200%);}
+.foot2, .foot3 {
+    width: calc(100% - 200px); height: 50%; float: left; 
+    display: flex; align-items: center; color: #fff;
+    justify-items: center; font-size: 14px;
+}
+.foot2 ul {width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;}
+.foot2 li {padding: 0 20px; border-left: 1px solid #fff;}
+.foot2 li:first-child {border: none;}
+.foot3 p {width: 100%; text-align: center;}
+
+/*------------------------*/
+
