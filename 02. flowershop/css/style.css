@@ -1,0 +1,150 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'InkLipquid';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+    width: 100%; height: 920px; color: #333333;
+    background: #ffffff; font-family: 'InkLipquid';
+    font-size: 20px;
+}
+ul {list-style: none;}
+a {display: block; text-decoration: none; color: inherit;}
+img {vertical-align: top; max-width: 100%;}
+table {max-width: 100%; border-collapse: collapse;}
+button {cursor: pointer;}
+
+/*레이아웃------------------------*/
+#top {width: 100%; height: 800px; display: flex;}
+header {width: 200px;}
+#wrap {width: calc(100% - 200px);}
+#slide {height: 400px;}
+#cont {height: 400px;}
+footer {width: 100%; height: 120px; display: flex; background: #738538;}
+/*헤더------------------------*/
+.logo {
+    width: 200px; height: 100px; padding: 0 10px;
+    display: flex; align-items: center; justify-content: center;
+}
+.logo a {width: 180px; height: 36px;}
+nav {width: 200px; padding: 10px; padding-right: 0;}
+.navi {width: 100%;}
+.navi>li>a {width: 100%; height: 100%; padding: 10px 30px;}
+.navi>li {
+    width: 190px; position: relative;
+}
+.navi>li:hover, .navi>li>a:focus {
+    background: #ddeab2; border-radius: 30px 0 0 30px;
+    font-weight: bold;
+}
+.sub {
+    width: calc(100vw - 180px); height: 45px;
+    position: absolute; display: none;
+    background: #ddeab2be; left: 190px; top: 0;
+    font-weight: normal; z-index: 33;
+}
+.sub>li>a {width: 100%; height: 45px; padding: 10px;}
+.sub>li {width: 150px; height: 45px; float: left;}
+.sub>li:hover, .sub>li>a:focus {
+    background: #a2b859; font-weight: bold; color: #fff;
+}
+
+/*슬라이드------------------------*/
+#slide ul {width: 100%; height: 100%; position: relative;}
+#slide li {width: 100%; height: 100%; position: absolute;}
+.s1 {background: url(../images/s1.jpg) no-repeat center/cover;}
+.s2 {background: url(../images/s2.jpg) no-repeat center/cover;}
+.s3 {background: url(../images/s3.jpg) no-repeat center/cover;}
+#slide li h2 {
+    width: 100%; height: 110px; position: absolute;
+    background: rgba(0, 0, 0, .3); bottom: 0;
+    color: #fff; padding: 0 20px; display: flex;
+    align-items: center; font-weight: normal;
+    text-shadow: 3px 3px 3px #000; overflow: hidden;
+}
+#slide li h2 span {
+    background: rgba(255, 255, 255, .8); padding: 5px; color: #8d59b8;
+    text-shadow: none; border-radius: 15px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
+}
+/*콘텐츠------------------------*/
+.cont1 {height: 150px; padding: 10px;}
+.cont1 ul {
+    width: 100%; height: 100%; display: flex;
+    align-items: center; justify-content: space-around;
+}
+.cont1 ul li {
+    width: 130px; height: 100%; background: #a2b859; border-radius: 100px;
+}
+.cont1 ul li a {
+    width: 100%; height: 100%; text-align: center;
+    color: #fff;
+}
+.cont1 img {width: 80px; margin-top: 15px;}
+.cont1 li:hover, .cont1>ul>li>a:focus {
+    background: #738538; border-radius: 100px;
+}
+
+.cont2 {height: 250px; padding: 10px; display: flex; justify-content: space-around;}
+.cont2>div {width: 49%; height: 100%;}
+.tab li {
+    width: 100px; height: 40px; text-align: center;
+    line-height: 40px; margin-left: 20px;
+    color: #fff; background: #a2b859;
+    border-radius: 15px 15px 0 0;
+}
+.tabcon {width: 100%; height: 190px; background: #fff; border: 1px solid #a2b859; padding: 10px; overflow: hidden;}
+.noti {width: 100%; height: 100%;}
+.noti tr {border-bottom: 1px dashed #a2b859;}
+.noti tr:last-child {border: none;}
+.noti th {font-weight: normal; padding: 0 10px;}
+.noti tr th a {width: 100%; height: 100%; text-align: left; display: flex; align-items: center;}
+.noti td {text-align: right; padding: 0 10px;}
+.noti tr:hover, .noti th:hover, .noti tr th a:focus {
+    background: #ddeab2; font-weight: bold;
+}
+.gall {
+    display: flex; align-items: center;
+    justify-content: space-around;
+}
+.gall li {width: 30%; height: 170px; padding: 10px;}
+.gall li a {width: 100%; height: 100%; text-align: center;}
+.gall img {border-radius: 100px; margin-bottom: 7px;}
+.gall img:hover {opacity: .5;}
+.gall li a:hover, .gall li a:focus {font-weight: bold;}
+
+/*팝업------------------------*/
+.modal {
+    width: 100%; height: 100%; position: fixed;
+    left: 0; top: 0; background: rgba(0, 0, 0, .5);
+    display: none;
+}
+.body {width: 300px; margin: 200px auto;}
+.bt {float: right;}
+button {
+    width: 60px; height: 35px; background: #738538;
+    line-height: 35px; border-radius: 10px; border: none;
+    text-align: center; font-weight: bold; color: #fff;
+    font-family: 'InkLipquid'; font-size: 18px;
+}
+
+/*푸터------------------------*/
+.foot1, .foot3 {width: 200px; height: 100%;}
+.foot2 {width: calc(100% - 400px); height: 100%;}
+.foot2>div {
+    width: 100%; height: 50%; display: flex;
+    align-items: center; justify-content: center; 
+    font-size: 16px; text-align: center; color: #fff;
+}
+.under ul {display: flex; align-items: center; justify-content: center;}
+.under li {padding: 0 20px; border-left: 1px solid #fff;}
+.under li:first-child {border: none;}
+.foot3 {display: flex; align-items: center; justify-content: center;}
+.foot3 form select {
+    font-family: 'InkLipquid'; font-size: 20px; padding: 0 10px; color: #738538; border: none;
+}
+/*------------------------*/
